@@ -22,17 +22,13 @@ $(function () {
   rec.start();
 
   $('.start').on('click', function () {
-    // $(this).attr('disabled', true);
     rec.start();
   });
 
   const outputUser = (message) => {
-    const now = new Date();
-    const h = `0${now.getHours()}`.slice(-2);
-    const m = `0${now.getMinutes()}`.slice(-2);
     return `
       <div class="line__right">
-        <div class="text">${message}</div>
+        <div class="text" contenteditable>${message}</div>
         <span class="date">${h}:${m}</span>
       </div>
     `;
